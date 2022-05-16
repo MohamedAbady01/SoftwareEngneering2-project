@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SoftwareProject_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SoftwareProject_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Admins">
           <Key>
             <PropertyRef Name="Admin_Password" />
@@ -52,7 +52,30 @@
           <Property Name="ProductType" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Price" Type="float" Nullable="false" />
           <Property Name="Description" Type="text" Nullable="false" />
+          <Property Name="image" Type="nvarchar" MaxLength="50" />
         </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'SoftwareProject_DB.dbo.SalesFact' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SalesFact">
+          <Property Name="Date" Type="nvarchar" MaxLength="255" />
+          <Property Name="ItemCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="ProductLine" Type="nvarchar" MaxLength="255" />
+          <Property Name="ClientCode" Type="float" />
+          <Property Name="Region" Type="nvarchar" MaxLength="255" />
+          <Property Name="Quntity" Type="nvarchar" MaxLength="255" />
+          <Property Name="Sales" Type="money" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'SoftwareProject_DB.dbo.Salesfact2' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Salesfact2">
+          <Property Name="Date" Type="datetime" />
+          <Property Name="ItemCode" Type="float" />
+          <Property Name="ProductLine" Type="nvarchar" MaxLength="255" />
+          <Property Name="ClientCode" Type="float" />
+          <Property Name="Region" Type="nvarchar" MaxLength="255" />
+          <Property Name="Quntity" Type="money" />
+          <Property Name="Sales" Type="money" />
+        </EntityType>-->
         <Association Name="FK_Disease_Products">
           <End Role="Products" Type="Self.Products" Multiplicity="1" />
           <End Role="Disease" Type="Self.Disease" Multiplicity="*" />
@@ -108,8 +131,7 @@
             <End Role="Orders" EntitySet="Orders" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SoftwareProject_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -166,6 +188,7 @@
           <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="Diseases" Relationship="Self.FK_Disease_Products" FromRole="Products" ToRole="Disease" />
           <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Products" FromRole="Products" ToRole="Orders" />
+          <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Orders_Customers">
           <End Role="Customers" Type="Self.Customer" Multiplicity="1" />
@@ -273,6 +296,7 @@
           <EntitySetMapping Name="Products">
             <EntityTypeMapping TypeName="SoftwareProject_DBModel.Product">
               <MappingFragment StoreEntitySet="Products">
+                <ScalarProperty Name="image" ColumnName="image" />
                 <ScalarProperty Name="ProductID" ColumnName="ProductID" />
                 <ScalarProperty Name="ProductName" ColumnName="ProductName" />
                 <ScalarProperty Name="ProductType" ColumnName="ProductType" />

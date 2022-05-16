@@ -53,6 +53,7 @@
     <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="Diseases" Relationship="Self.FK_Disease_Products" FromRole="Products" ToRole="Disease" />
     <NavigationProperty Name="Orders" Relationship="Self.FK_Orders_Products" FromRole="Products" ToRole="Orders" />
+    <Property Name="image" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <Association Name="FK_Orders_Customers">
     <End Role="Customers" Type="Self.Customer" Multiplicity="1" />

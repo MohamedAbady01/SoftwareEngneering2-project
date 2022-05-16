@@ -9,7 +9,7 @@
         <EntityTypeShape EntityType="SoftwareProject_DBModel.Customer" Width="1.5" PointX="0.75" PointY="7.125" IsExpanded="true" />
         <EntityTypeShape EntityType="SoftwareProject_DBModel.Disease" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
         <EntityTypeShape EntityType="SoftwareProject_DBModel.Order" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="SoftwareProject_DBModel.Product" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SoftwareProject_DBModel.Product" Width="1.5" PointX="0.75" PointY="3.375" IsExpanded="true" />
         <AssociationConnector Association="SoftwareProject_DBModel.FK_Orders_Customers" ManuallyRouted="false" />
         <AssociationConnector Association="SoftwareProject_DBModel.FK_Disease_Products" ManuallyRouted="false" />
         <AssociationConnector Association="SoftwareProject_DBModel.FK_Orders_Products" ManuallyRouted="false" />

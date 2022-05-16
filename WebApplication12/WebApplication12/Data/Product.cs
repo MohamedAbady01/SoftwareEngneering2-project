@@ -26,6 +26,7 @@ namespace WebApplication12.Data
         public string ProductType { get; set; }
         public double Price { get; set; }
         public string Description { get; set; }
+        public string image { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Disease> Diseases { get; set; }

@@ -215,7 +215,6 @@
     <Compile Include="Areas\Admin\Models\LoginModel.cs" />
     <Compile Include="Areas\Admin\Models\UserNameAttribute.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
-    <Compile Include="Controllers\HomePageController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Data\Admin.cs">
       <DependentUpon>Software2_DB.tt</DependentUpon>
@@ -277,6 +276,9 @@
     <Content Include="Views\ViewProduct\Index.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\CreateProduct.cshtml" />
+    <Content Include="Views\Products\DeleteProduct.cshtml" />
+    <Content Include="Views\Products\Delete.cshtml" />
+    <Content Include="Views\Products\Edit.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

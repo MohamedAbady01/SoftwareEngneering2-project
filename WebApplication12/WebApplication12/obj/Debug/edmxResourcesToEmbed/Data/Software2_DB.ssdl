@@ -47,7 +47,30 @@
     <Property Name="ProductType" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Price" Type="float" Nullable="false" />
     <Property Name="Description" Type="text" Nullable="false" />
+    <Property Name="image" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SoftwareProject_DB.dbo.SalesFact' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="SalesFact">
+          <Property Name="Date" Type="nvarchar" MaxLength="255" />
+          <Property Name="ItemCode" Type="nvarchar" MaxLength="255" />
+          <Property Name="ProductLine" Type="nvarchar" MaxLength="255" />
+          <Property Name="ClientCode" Type="float" />
+          <Property Name="Region" Type="nvarchar" MaxLength="255" />
+          <Property Name="Quntity" Type="nvarchar" MaxLength="255" />
+          <Property Name="Sales" Type="money" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'SoftwareProject_DB.dbo.Salesfact2' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Salesfact2">
+          <Property Name="Date" Type="datetime" />
+          <Property Name="ItemCode" Type="float" />
+          <Property Name="ProductLine" Type="nvarchar" MaxLength="255" />
+          <Property Name="ClientCode" Type="float" />
+          <Property Name="Region" Type="nvarchar" MaxLength="255" />
+          <Property Name="Quntity" Type="money" />
+          <Property Name="Sales" Type="money" />
+        </EntityType>-->
   <Association Name="FK_Disease_Products">
     <End Role="Products" Type="Self.Products" Multiplicity="1" />
     <End Role="Disease" Type="Self.Disease" Multiplicity="*" />

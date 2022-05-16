@@ -1,16 +1,20 @@
 ﻿@model WebApplication12.Data.Product
+
+
 <!DOCTYPE html>
+
 <html>
 <head>
-    <title>CreateProduct</title>
+    <meta name="viewport" content="width=device-width" />
+    <title>DeleteProduct</title>
     <link href="~/css/StyleLogin.css" rel="stylesheet" />
 </head>
 <body>
 
     <div class="center">
-        <h1>Add an item</h1>
-      @using (Html.BeginForm("CreateProduct", "Products",FormMethod.Post,new { enctype = "multipart/form-data" }))
-      {
+        <h1>DeLete an item</h1>
+        @using (Html.BeginForm())
+        {
 
 
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -56,24 +60,19 @@
 
             </div>
 
-            <div class="txt_field3">
-                <input type="file" id="img" name="img"  required>
 
-                <span></span>
-                @Html.LabelFor(model => model.image)
-            </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <input type="submit" value="Create" class="btn btn-default" href=@Url.Action("Index","Products") />
-                    </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Delete" class="btn btn-default" href=@Url.Action("Index","Products") />
                 </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
 
-                        <a href=@Url.Action("Index","Products")>Back To list </a>
-                    </div>
+                    <a href=@Url.Action("Index","Products")>Back To list </a>
                 </div>
-                }
             </div>
+        }
+    </div>
 </body>
 </html>
