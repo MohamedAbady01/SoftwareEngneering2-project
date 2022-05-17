@@ -70,3 +70,4 @@ C:\Users\moels\source\repos\WebApplication12\WebApplication12\obj\Debug\WebAppli
 C:\Users\moels\source\repos\WebApplication12\WebApplication12\obj\Debug\WebApplication12.csproj.CopyComplete
 C:\Users\moels\source\repos\WebApplication12\WebApplication12\obj\Debug\WebApplication12.dll
 C:\Users\moels\source\repos\WebApplication12\WebApplication12\obj\Debug\WebApplication12.pdb
+C:\Users\moels\source\repos\WebApplication12\WebApplication12\obj\Debug\WebApplication12.csprojAssemblyReference.cache

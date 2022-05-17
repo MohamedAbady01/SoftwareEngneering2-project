@@ -44,9 +44,10 @@ namespace WebApplication12.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
             Product product = dp.Products.Find(id);
-
+            Disease disease = dp.Diseases.Find(id);
 
             dp.Products.Remove(product);
+            dp.Diseases.Remove(disease);
             dp.SaveChanges();
             return RedirectToAction("Index");
 
@@ -95,10 +96,18 @@ namespace WebApplication12.Controllers
         }
         [HttpPost, ActionName("Edit")]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ProductID,ProductName,Price,ProductType,Description")] Product product)
+        public ActionResult Edit([Bind(Include = "ProductID,ProductName,Price,ProductType,Description")] Product product, HttpPostedFileBase img)
         {
+            
             if (ModelState.IsValid)
             {
+                string path = " ";
+                if (img.FileName.Length > 0)
+                {
+                    path = "~/images/" + Path.GetFileName(img.FileName);
+                    img.SaveAs(Server.MapPath(path));
+                }
+                product.image = path; 
                 dp.Entry(product).State = EntityState.Modified;
                 dp.SaveChanges();
                 return RedirectToAction("Index");
@@ -106,5 +115,6 @@ namespace WebApplication12.Controllers
             return View(product);
 
         }
+
     }
 }

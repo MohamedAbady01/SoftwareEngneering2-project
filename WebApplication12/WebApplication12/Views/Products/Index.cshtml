@@ -43,11 +43,14 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Price)
                 </td>
+
                 <td>
                     @Html.DisplayFor(modelItem => item.Description)
                 </td>
                 <td>
-                   <img src="@Url.Content(item.image)"  width="50" height="50"/>;
+                    @Html.DisplayFor(modelItem => item.image)
+
+                    @*<img href="@Url.Content(item.image)" width="50" height="50" alt="" />*@
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", new { id = item.ProductID }, new { @class = "btn btn-primary" }) |

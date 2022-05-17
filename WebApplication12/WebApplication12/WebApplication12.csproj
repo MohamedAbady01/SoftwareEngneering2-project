@@ -132,6 +132,8 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\LoginCustomer.cshtml" />
     <Content Include="Views\DefaultAdmin\Index.cshtml" />
+    <Content Include="Views\Customer\Search.cshtml" />
+    <Content Include="Views\Customer\Signup.cshtml" />
     <None Include="Views\Default\Index.cshtml" />
     <Content Include="css\style.css" />
     <Content Include="images\about-vid.mp4" />
@@ -184,7 +186,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="search hospital.html" />
     <Content Include="Search Page.html" />
-    <Content Include="Search.png" />
+    <Content Include="images\Search.png" />
     <Content Include="searchimage.jpg" />
     <Content Include="css\searchstyle.css" />
     <Content Include="Shopping Cart\cart.html" />
@@ -210,6 +212,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminViewProductsController.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\DefaultAdminController.cs" />
     <Compile Include="Areas\Admin\Models\AddItem.cs" />
     <Compile Include="Areas\Admin\Models\LoginModel.cs" />
@@ -279,6 +282,7 @@
     <Content Include="Views\Products\DeleteProduct.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
+    <Content Include="Views\Products\Search.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -290,6 +294,7 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Models\" />
+    <Folder Include="NewFolder1\" />
     <Folder Include="Shopping Cart\NewFolder1\" />
     <Folder Include="Views\AdminViewProducts\" />
   </ItemGroup>
