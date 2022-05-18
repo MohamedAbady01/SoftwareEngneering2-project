@@ -205,7 +205,9 @@
     <Content Include="css\StyleLogin.css" />
     <Content Include="Views\Products\Add.css" />
     <Content Include="Views\Products\HtmlPage1.html" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />

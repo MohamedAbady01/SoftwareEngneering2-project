@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@model IEnumerable<WebApplication12.Data.Product>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -25,11 +27,14 @@
         <a href="#home" class="logo">Herbs & Fruits<span>.</span></a>
 
         <nav class="navbar">
-            <a href="#home">home</a>
-            <a href="#about">about</a>
-            <a href="#productsStore">products</a>
-            <a href="#review">reviews</a>
-            <a href="#contact">contact</a>
+            <a href=@Url.Action("Index","Default")>home</a>
+
+            <a href="@Url.Action("Search","Customer")">Search</a>
+            <a href="homepage.html#productsStore">products</a>
+            <a href="homepage.html#about">about</a>
+
+            <a href="homepage.html#review">reviews</a>
+            <a href="homepage.html#contact">contact</a>
         </nav>
         <!---Replace Directories!!!!!!--->
         <div class="icons">
@@ -123,6 +128,178 @@
 
     <!-- icons section ends -->
     <!-- prodcuts section starts  -->
+    @*<section class="productsStore" id="productsStore">
+
+            <h1 class="heading"> latest <span>products</span> </h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <span class="discount">-10%</span>
+                    <div class="image">
+                        <a href="Product%20Page/product.html"><img src="images/img-1.jpg" alt=""></a>
+                        <img src="~/images/img-1.jpg" />
+                        <div class="icons">
+
+                            <a class="cart-btn">add to cart</a>
+
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Badia allspice</h3>
+                        <div class="price">EGP 105.30 <span>EGP 117.00</span> </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <span class="discount">-15%</span>
+                    <div class="image">
+                        <a href="Product%20Page/product.html">
+                            <img src="images/img-2.jpg" alt="">
+                            <img src="~/images/img-2.jpg" />
+                        </a>
+                        <div class="icons">
+
+                            <a class="cart-btn">add to cart</a>
+
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Basil Leaves</h3>
+                        <div class="price"> EGP 51 <span>EGP 60</span> </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <span class="discount">-5%</span>
+                    <div class="image">
+                        <a href="Product%20Page/product.html"> <img src="images/img-3.jpg" alt=""></a>
+                        <img src="~/images/img-3.jpg" />
+                        <div class="icons">
+
+                            <a class="cart-btn">add to cart</a>
+
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Keya Rosemary</h3>
+                        <div class="price"> EGP 95 <span>EGP 100</span> </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <span class="discount">-20%</span>
+                    <div class="image">
+                        <a href="Product%20Page/product.html">
+                            <img src="~/images/img-4.jpg" />
+                        </a>
+                        <div class="icons">
+
+                            <a class="cart-btn">add to cart</a>
+
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Bergamot Essential Oil</h3>
+                        <div class="price"> EGP 33.6 <span>EGP 42</span> </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <span class="discount">-17%</span>
+                    <div class="image">
+                        <a href="Product%20Page/product.html">
+                            <img src="~/images/img-5.jpg" />
+                        </a>
+                        <div class="icons">
+
+                            <a class="cart-btn">add to cart</a>
+
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Dragon Fruit</h3>
+                        <div class="price"> EGP 74.70 <span>EGP 90</span> </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <span class="discount">-3%</span>
+                    <div class="image">
+                        <a href="Product%20Page/product.html">
+                            <img src="~/images/img-6.jpg" />
+                        </a>
+                        <div class="icons">
+
+                            <a class="cart-btn">add to cart</a>
+
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Oranges</h3>
+                        <div class="price"> EGP 7 <span>EGP 10</span> </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <span class="discount">-18%</span>
+                    <div class="image">
+                        <a href="Product%20Page/product.html">
+
+                            <img src="~/images/img-7.jpg" />
+                        </a>
+                        <div class="icons">
+
+                            <a class="cart-btn">add to cart</a>
+
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Strawberries</h3>
+                        <div class="price"> EGP 8.2 <span>EGP 10.00</span> </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <span class="discount">-10%</span>
+                    <div class="image">
+                        <a href="Product%20Page/product.html">
+                            <img src="~/images/img-8.jpg" />
+                        </a>
+                        <div class="icons">
+
+                            <a class="cart-btn">add to cart</a>
+
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Tanjerine</h3>
+                        <div class="price"> EGP 10.08 <span>EGP 12.00</span> </div>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <span class="discount">-5%</span>
+                    <div class="image">
+                        <a href="Product%20Page/product.html">
+
+                            <img src="~/images/img-9.jpg" />
+                        </a>
+                        <div class="icons">
+
+                            <a class="cart-btn">add to cart</a>
+
+                        </div>
+                    </div>
+                    <div class="content">
+                        <h3>Avocado</h3>
+                        <div class="price"> EGP 85.5 <span> EGP 90 </span> </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>*@
 
     <section class="productsStore" id="productsStore">
 
@@ -130,171 +307,24 @@
 
         <div class="box-container">
 
-            <div class="box">
-                <span class="discount">-10%</span>
-                <div class="image">
-                    <a href="Product%20Page/product.html"><img src="images/img-1.jpg" alt=""></a>
-                    <img src="~/images/img-1.jpg" />
-                    <div class="icons">
+            @foreach (var item in Model)
+            {
+                <div class="box">
 
-                        <a class="cart-btn">add to cart</a>
+                    <div class="image">
 
-                    </div>
-                </div>
-                <div class="content">
-                    <h3>Badia allspice</h3>
-                    <div class="price">EGP 105.30 <span>EGP 117.00</span> </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-15%</span>
-                <div class="image">
-                    <a href="Product%20Page/product.html">
-                        <img src="images/img-2.jpg" alt="">
-                        <img src="~/images/img-2.jpg" />
-                    </a>
-                    <div class="icons">
-
-                        <a class="cart-btn">add to cart</a>
+                        @*<a href="Product%20Page/Product.html"> <img src="@Url.Content(item.image)" /></a>*@
+                        <div class="icons">
+                            <a class="cart-btn">add to cart</a>
+                        </div>
 
                     </div>
                 </div>
                 <div class="content">
-                    <h3>Basil Leaves</h3>
-                    <div class="price"> EGP 51 <span>EGP 60</span> </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-5%</span>
-                <div class="image">
-                    <a href="Product%20Page/product.html"> <img src="images/img-3.jpg" alt=""></a>
-                    <img src="~/images/img-3.jpg" />
-                    <div class="icons">
-
-                        <a class="cart-btn">add to cart</a>
-
-                    </div>
-                </div>
-                <div class="content">
-                    <h3>Keya Rosemary</h3>
-                    <div class="price"> EGP 95 <span>EGP 100</span> </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-20%</span>
-                <div class="image">
-                    <a href="Product%20Page/product.html">
-                        <img src="~/images/img-4.jpg" />
-                    </a>
-                    <div class="icons">
-
-                        <a class="cart-btn">add to cart</a>
-
-                    </div>
-                </div>
-                <div class="content">
-                    <h3>Bergamot Essential Oil</h3>
-                    <div class="price"> EGP 33.6 <span>EGP 42</span> </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-17%</span>
-                <div class="image">
-                    <a href="Product%20Page/product.html">
-                        <img src="~/images/img-5.jpg" />
-                    </a>
-                    <div class="icons">
-
-                        <a class="cart-btn">add to cart</a>
-
-                    </div>
-                </div>
-                <div class="content">
-                    <h3>Dragon Fruit</h3>
-                    <div class="price"> EGP 74.70 <span>EGP 90</span> </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-3%</span>
-                <div class="image">
-                    <a href="Product%20Page/product.html">
-                        <img src="~/images/img-6.jpg" />
-                    </a>
-                    <div class="icons">
-
-                        <a class="cart-btn">add to cart</a>
-
-                    </div>
-                </div>
-                <div class="content">
-                    <h3>Oranges</h3>
-                    <div class="price"> EGP 7 <span>EGP 10</span> </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-18%</span>
-                <div class="image">
-                    <a href="Product%20Page/product.html">
-
-                        <img src="~/images/img-7.jpg" />
-                    </a>
-                    <div class="icons">
-
-                        <a class="cart-btn">add to cart</a>
-
-                    </div>
-                </div>
-                <div class="content">
-                    <h3>Strawberries</h3>
-                    <div class="price"> EGP 8.2 <span>EGP 10.00</span> </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-10%</span>
-                <div class="image">
-                    <a href="Product%20Page/product.html">
-                        <img src="~/images/img-8.jpg" />
-                    </a>
-                    <div class="icons">
-
-                        <a class="cart-btn">add to cart</a>
-
-                    </div>
-                </div>
-                <div class="content">
-                    <h3>Tanjerine</h3>
-                    <div class="price"> EGP 10.08 <span>EGP 12.00</span> </div>
-                </div>
-            </div>
-
-            <div class="box">
-                <span class="discount">-5%</span>
-                <div class="image">
-                    <a href="Product%20Page/product.html">
-
-                        <img src="~/images/img-9.jpg" />
-                    </a>
-                    <div class="icons">
-
-                        <a class="cart-btn">add to cart</a>
-
-                    </div>
-                </div>
-                <div class="content">
-                    <h3>Avocado</h3>
-                    <div class="price"> EGP 85.5 <span> EGP 90 </span> </div>
-                </div>
-            </div>
-
+                    <h3>@item.ProductName</h3>
+                    <div class="price">EGP 105.30 <span>@item.Price</span> </div>
+                </div>}
         </div>
-
     </section>
 
     <!-- prodcuts section ends -->
